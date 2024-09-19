@@ -3,24 +3,24 @@ import logo from "@/../public/assets/images/logo.svg";
 const menuOneData = {
   logo: logo,
   href: "/",
-  btnText: "Subscribe Now",
+  btnText: "İletişime Geç",
   menus: [
     {
-      name: "Home",
-      href: "#",
+      name: "Ana Sayfa",
+      href: "/",
       subMenus: [
-        {
+        /*  {
           name: "Home One",
           href: "/",
-        },
-        {
+        }, */
+        /*  {
           name: "Home Two",
           href: "home-two",
-        },
+        }, */
       ],
     },
     {
-      name: "Movies",
+      name: "Program Konukluğu",
       href: "#",
       subMenus: [
         {
@@ -57,6 +57,7 @@ const menuOneData = {
             },
           ],
         },
+
         {
           name: "Pagination",
           href: "#",
@@ -82,7 +83,7 @@ const menuOneData = {
       ],
     },
     {
-      name: "Pages",
+      name: "TV Reklam",
       href: "#",
       subMenus: [
         {
@@ -119,7 +120,7 @@ const menuOneData = {
         },
       ],
     },
-    {
+    /*  {
       name: "Blog",
       href: "#",
       subMenus: [
@@ -178,10 +179,25 @@ const menuOneData = {
           ],
         },
       ],
+    }, */
+
+    {
+      name: "Bilboard Reklam",
+      href: "/",
+      subMenus: [
+        /*  {
+          name: "Home One",
+          href: "/",
+        }, */
+        /*  {
+          name: "Home Two",
+          href: "home-two",
+        }, */
+      ],
     },
     {
-      name: "FAQ",
-      href: "faq",
+      name: "Hakkımızda",
+      href: "about",
     },
   ],
 };

@@ -5,7 +5,7 @@ import iconad from "@/../public/assets/images/icons/ad.svg";
 import iconsdh from "@/../public/assets/images/icons/sdh.svg";
 
 const movieBanner = {
-  title: "The monkey king",
+  title: "Zen Medya",
   rating: "4.9",
   duration: "02h 30m",
   quality: "4k",

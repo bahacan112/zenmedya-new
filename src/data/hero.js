@@ -13,26 +13,25 @@ const heroOneData = {
     {
       videoSrc: "assets/video/video.mp4",
       image: HeroSlideImageTwo,
-      rating: "4.9",
-      duration: "02h 30m",
-      quality: "4k",
-      title: "Siz Hayal Edin Biz Yapalım",
-      description:
-        "Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!",
-      btnOneText: "Watch Now",
-      btnTwoText: "Play Trailer",
+      rating: "4 Milyon İzlenme",
+      duration: "25-30 dakika",
+      quality: "1080p",
+      title: "Markanızı Milyonlara Ulaştırın!",
+      description: "TV Canlı Yayınlara konukluğu,Alt Bant Reklam, Spot Reklam ",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
-    {
+    /*   {
       videoSrc: "assets/video/video.mp4",
-      image: HeroSlideImageOne,
+      image: HeroSlideImageTwo,
       rating: "4.9",
       duration: "02h 30m",
       quality: "4k",
       title: "ENIGM OF SHADOWS",
       description:
         "Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!",
-      btnOneText: "Watch Now",
-      btnTwoText: "Play Trailer",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
     {
       videoSrc: "assets/video/video.mp4",
@@ -43,8 +42,8 @@ const heroOneData = {
       title: "The Dark Beauty",
       description:
         "Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!",
-      btnOneText: "Watch Now",
-      btnTwoText: "Play Trailer",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
     {
       videoSrc: "assets/video/video.mp4",
@@ -55,8 +54,8 @@ const heroOneData = {
       title: "ENIGM OF SHADOWS",
       description:
         "Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!",
-      btnOneText: "Watch Now",
-      btnTwoText: "Play Trailer",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
     {
       videoSrc: "assets/video/video.mp4",
@@ -67,8 +66,19 @@ const heroOneData = {
       title: "ENIGM OF SHADOWS",
       description:
         "Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!",
-      btnOneText: "Watch Now",
-      btnTwoText: "Play Trailer",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
+    }, */
+    {
+      videoSrc: "assets/video/video2.mp4",
+      image: HeroSlideImageOne,
+      rating: "4.9",
+      duration: "02h 30m",
+      quality: "4k",
+      title: "Bilboard Reklam",
+      description: "Avrupa'da ve Afrika'da geniş kitlelere ulaşın",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
     {
       videoSrc: "assets/video/video.mp4",
@@ -76,30 +86,18 @@ const heroOneData = {
       rating: "4.9",
       duration: "02h 30m",
       quality: "4k",
-      title: "Siz Hayal Edin Biz Yapalım",
+      title: "Web Sitesi Tasarım",
       description:
-        "Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!",
-      btnOneText: "Watch Now",
-      btnTwoText: "Play Trailer",
-    },
-    {
-      videoSrc: "assets/video/video.mp4",
-      image: HeroSlideImageOne,
-      rating: "4.9",
-      duration: "02h 30m",
-      quality: "4k",
-      title: "ENIGM OF SHADOWS",
-      description:
-        "Enjoy your favorite moves, tv show, sports, news, Live event and entertainment streaming now!",
-      btnOneText: "Watch Now",
-      btnTwoText: "Play Trailer",
+        "Hedef Kitlenize uygun şık tasarımlar, İnternet Reklamcılığı ile nokta atışı müşterilerinize ulaşın",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
   ],
   cardSlides: [
     {
       image: HeroCardSlideImageOne,
-      title: "The Phantom Menace",
-      description: "Action Movies",
+      title: "Canlı Yayın Konukluğu",
+      description: "Bloomberg HT,CNN Türk, Ekotürk, A Haber",
     },
     {
       image: HeroCardSlideImageTwo,
@@ -125,8 +123,8 @@ const heroTwoData = {
       rating: "4.9",
       duration: "02h 30m",
       quality: "4k",
-      btnOneText: "Watch Now",
-      btnTwoText: "PLAY TRAILER",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
     {
       videoSrc: "assets/video/video.mp4",
@@ -137,8 +135,8 @@ const heroTwoData = {
       rating: "4.9",
       duration: "02h 30m",
       quality: "4k",
-      btnOneText: "Watch Now",
-      btnTwoText: "PLAY TRAILER",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
     {
       videoSrc: "assets/video/video.mp4",
@@ -149,8 +147,8 @@ const heroTwoData = {
       rating: "4.9",
       duration: "02h 30m",
       quality: "4k",
-      btnOneText: "Watch Now",
-      btnTwoText: "PLAY TRAILER",
+      btnOneText: "Teklif Alın",
+      btnTwoText: "Bize Ulaşın",
     },
   ],
 };

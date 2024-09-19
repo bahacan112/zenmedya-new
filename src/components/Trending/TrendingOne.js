@@ -44,7 +44,7 @@ export default function TrendingOne() {
       <div className="d-flex justify-content-center mb-40">
         <div className="section-header">
           <span>⚡</span>
-          <h3 className="section-title lh-1 mt-2 mb-0">Trending Now</h3>
+          <h3 className="section-title lh-1 mt-2 mb-0">TRENDLER</h3>
         </div>
       </div>
       {movies && movies.length > 0 && (

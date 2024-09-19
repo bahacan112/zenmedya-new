@@ -44,7 +44,7 @@ export default function TrendingTwo() {
       <div className="bg-gradient-black pt-80">
         <div className="hl-container d-flex align-items-center justify-content-between">
           <h3 className="d-inline-flex align-item-center section-header style-two mb-0 lh-1">
-            <span className="section-title mt-2">Trending Now</span>
+            <span className="section-title mt-2">Su anda trend olanlar</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
