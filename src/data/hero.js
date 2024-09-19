@@ -12,15 +12,17 @@ const heroOneData = {
   slides: [
     {
       videoSrc: "assets/video/video.mp4",
-      image: HeroSlideImageTwo,
-      rating: "4 Milyon İzlenme",
-      duration: "25-30 dakika",
-      quality: "1080p",
-      title: "Markanızı Milyonlara Ulaştırın!",
-      description: "TV Canlı Yayınlara konukluğu,Alt Bant Reklam, Spot Reklam ",
+      image: HeroSlideImageOne,
+      rating: "4.9",
+      duration: "02h 30m",
+      quality: "4k",
+      title: "Web Sitesi Tasarım",
+      description:
+        "Hedef Kitlenize uygun şık tasarımlar, İnternet Reklamcılığı ile nokta atışı müşterilerinize ulaşın",
       btnOneText: "Teklif Alın",
       btnTwoText: "Bize Ulaşın",
     },
+
     /*   {
       videoSrc: "assets/video/video.mp4",
       image: HeroSlideImageTwo,
@@ -82,13 +84,12 @@ const heroOneData = {
     },
     {
       videoSrc: "assets/video/video.mp4",
-      image: HeroSlideImageOne,
-      rating: "4.9",
-      duration: "02h 30m",
-      quality: "4k",
-      title: "Web Sitesi Tasarım",
-      description:
-        "Hedef Kitlenize uygun şık tasarımlar, İnternet Reklamcılığı ile nokta atışı müşterilerinize ulaşın",
+      image: HeroSlideImageTwo,
+      rating: "4 Milyon İzlenme",
+      duration: "25-30 dakika",
+      quality: "1080p",
+      title: "Markanızı Milyonlara Ulaştırın!",
+      description: "TV Canlı Yayınlara konukluğu,Alt Bant Reklam, Spot Reklam ",
       btnOneText: "Teklif Alın",
       btnTwoText: "Bize Ulaşın",
     },
