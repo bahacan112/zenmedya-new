@@ -21,7 +21,7 @@ export async function GET() {
     return new Response(JSON.stringify(yayinAkisi), { status: 200 });
   } catch (error) {
     console.error("Veri alınırken bir hata oluştu:", error);
-    return new Response(JSON.stringify({ error: "Failed to fetch data" }), {
+    return new Response(JSON.stringify({ error: "111Failed to fetch data" }), {
       status: 500,
     });
   }
