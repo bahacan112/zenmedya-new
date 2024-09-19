@@ -1,10 +1,14 @@
 // app/deneme/page.js
 import React from "react";
 
+// API'den veri çekme fonksiyonu
 async function fetchYayinAkisi() {
   try {
     const response = await fetch(
-      "https://zenmedya-new.vercel.app/api/yayinAkisi"
+      "https://zenmedya-new.vercel.app/api/yayinAkisi",
+      {
+        cache: "no-store", // Her zaman yeni verileri çekmek için
+      }
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data");
@@ -16,6 +20,7 @@ async function fetchYayinAkisi() {
   }
 }
 
+// Bileşen
 export default async function YayinAkisi() {
   const yayinAkisi = await fetchYayinAkisi();
 
