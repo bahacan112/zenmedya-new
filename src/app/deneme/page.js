@@ -2,7 +2,7 @@
 import React from "react";
 
 const DenemePage = async () => {
-  const res = await fetch("http://localhost:3000/api/yayinAkisi"); // Yerel geliştirme için
+  const res = await fetch("https://zenmedya-new.vercel.app/api/yayinAkisi"); // Yerel geliştirme için
   if (!res.ok) {
     throw new Error("Veri alınamadı");
   }
