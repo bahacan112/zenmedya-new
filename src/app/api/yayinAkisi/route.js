@@ -1,60 +1,57 @@
-import puppeteer from "puppeteer";
+import axios from "axios";
+import * as cheerio from "cheerio";
 
 export async function GET() {
   try {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto("https://www.bloomberght.com/yayinakisi");
+    const response = await axios.get("https://www.bloomberght.com/yayinakisi");
 
-    const yayinAkisi = await page.evaluate(() => {
-      const data = {
-        Monday: [],
-        Tuesday: [],
-        Wednesday: [],
-        Thursday: [],
-        Friday: [],
-        Saturday: [],
-        Sunday: [],
-      };
+    // cheerio ile HTML içeriğini parse et
+    const $ = cheerio.load(response.data);
 
-      const days = Array.from(
-        document.querySelectorAll(".widget-accordion.type1")
-      );
-      days.forEach((day, dayIndex) => {
-        const dayNames = [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ];
-        const currentDay = dayNames[dayIndex];
+    // Veri depolama yapısı (günlere göre)
+    const yayinAkisi = {
+      Monday: [],
+      Tuesday: [],
+      Wednesday: [],
+      Thursday: [],
+      Friday: [],
+      Saturday: [],
+      Sunday: [],
+    };
 
-        const items = Array.from(day.querySelectorAll(".accordionItem"));
-        items.forEach((item) => {
-          const imgSrc = item.querySelector("img")
-            ? item.querySelector("img").src
-            : "";
-          const title = item.querySelector("h4")
-            ? item.querySelector("h4").innerText.trim()
-            : "";
-          const time = item.querySelector(".time")
-            ? item.querySelector(".time").innerHTML.trim()
-            : "";
-          const description = item.querySelector("p")
-            ? item.querySelector("p").innerHTML.trim()
-            : "";
+    // Günlerin sıralı listesi
+    const dayNames = [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ];
 
-          data[currentDay].push({ imgSrc, title, time, description });
+    // Tüm günleri seç
+    const days = $(".widget-accordion.type1");
+
+    // Her gün için programları çek
+    days.each((dayIndex, dayElement) => {
+      const currentDay = dayNames[dayIndex];
+
+      // O gün için tüm programları çek
+      $(dayElement)
+        .find(".accordionItem")
+        .each((_, item) => {
+          const imgSrc = $(item).find("img").attr("src") || "";
+          const title = $(item).find("h4").text().trim() || "";
+          const time = $(item).find(".time").text().trim() || "";
+          const description = $(item).find("p").text().trim() || "";
+
+          // Günü ve program detaylarını veriye ekle
+          yayinAkisi[currentDay].push({ imgSrc, title, time, description });
         });
-      });
-
-      return data;
     });
 
-    await browser.close();
+    // Veriyi JSON olarak dön
     return new Response(JSON.stringify(yayinAkisi), { status: 200 });
   } catch (error) {
     console.error("Veri alınırken bir hata oluştu:", error);
