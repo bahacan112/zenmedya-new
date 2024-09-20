@@ -2,12 +2,15 @@
 import React from "react";
 
 const DenemePage = async () => {
-  const res = await fetch("https://zenmedya-new.vercel.app/api/yayinAkisi"); // Yerel geliştirme için
-  if (!res.ok) {
-    throw new Error("Veri alınamadı");
+  try {
+    const res = await fetch("https://zenmedya-new.vercel.app/api/yayinAkisi"); // Yerel geliştirme için
+    if (!res.ok) {
+      throw new Error("Veri alınamadı");
+    }
+    const yayinAkisi = await res.json();
+  } catch {
+    console.log(error);
   }
-  const yayinAkisi = await res.json();
-
   return (
     <div>
       {/*   <h1>Yayın Akışı</h1>
