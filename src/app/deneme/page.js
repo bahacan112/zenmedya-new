@@ -7,7 +7,6 @@ const DenemePage = async () => {
     throw new Error("Veri alınamadı");
   }
   const yayinAkisi = await res.json();
-  console.log(yayinAkisi);
   return (
     <div>
       <h1>Yayın Akışı</h1>
