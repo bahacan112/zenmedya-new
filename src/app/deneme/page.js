@@ -11,7 +11,7 @@ export default function Deneme() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3000/api/yayinAkisi");
+      const response = await fetch("https://www.zenmedya.org/api/yayinAkisi");
       const data = await response.json();
       fetchedDataRef.current = data;
       setProgramData(data);
