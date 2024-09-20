@@ -7,9 +7,10 @@ const DenemePage = async () => {
     throw new Error("Veri alınamadı");
   }
   const yayinAkisi = await res.json();
+
   return (
     <div>
-      <h1>Yayın Akışı</h1>
+      {/*   <h1>Yayın Akışı</h1>
       {Object.entries(yayinAkisi).map(([day, programs]) => (
         <div key={day} className="day-section">
           <h2>{day}</h2>
@@ -29,7 +30,7 @@ const DenemePage = async () => {
             )}
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
