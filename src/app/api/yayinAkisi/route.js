@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
-
+let id = 0;
 export async function GET() {
   try {
     const response = await axios.get("https://www.bloomberght.com/yayinakisi");
@@ -10,24 +10,24 @@ export async function GET() {
 
     // Veri depolama yapısı (günlere göre)
     const yayinAkisi = {
-      Monday: [],
-      Tuesday: [],
-      Wednesday: [],
-      Thursday: [],
-      Friday: [],
-      Saturday: [],
-      Sunday: [],
+      Pazartesi: [],
+      Sali: [],
+      Carsamba: [],
+      Persembe: [],
+      Cuma: [],
+      Cumartesi: [],
+      Pazar: [],
     };
 
     // Günlerin sıralı listesi
     const dayNames = [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
+      "Pazartesi",
+      "Sali",
+      "Carsamba",
+      "Persembe",
+      "Cuma",
+      "Cumartesi",
+      "Pazar",
     ];
 
     // Tüm günleri seç
@@ -45,9 +45,15 @@ export async function GET() {
           const title = $(item).find("h4").text().trim() || "";
           const time = $(item).find(".time").text().trim() || "";
           const description = $(item).find("p").text().trim() || "";
-
+          id++;
           // Günü ve program detaylarını veriye ekle
-          yayinAkisi[currentDay].push({ imgSrc, title, time, description });
+          yayinAkisi[currentDay].push({
+            id,
+            imgSrc,
+            title,
+            time,
+            description,
+          });
         });
     });
 

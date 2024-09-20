@@ -1,8 +1,7 @@
 // pages/deneme.js
 "use client";
 import { useEffect, useState, useRef } from "react";
-/* import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap stil dosyasını dahil et
- */ import FooterOne from "@/components/Footer/FooterOne";
+import FooterOne from "@/components/Footer/FooterOne";
 import HeaderOne from "@/components/Header/HeaderOne";
 
 export default function Deneme() {
@@ -11,41 +10,59 @@ export default function Deneme() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("https://www.zenmedya.org/api/yayinAkisi");
-      const data = await response.json();
-      fetchedDataRef.current = data;
-      setProgramData(data);
+      try {
+        const response = await fetch("https://www.zenmedya.org/api/yayinAkisi");
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        fetchedDataRef.current = data;
+        setProgramData(data);
+      } catch (error) {
+        console.error("Veri alırken hata oluştu:", error);
+      }
     };
 
     fetchData();
   }, []);
+
   const breadcrumb = {
-    title: "Yayın AkıSı",
+    title: "Yayın Akısı",
     links: [
       { name: "Home", href: "/" },
       { name: "Bloomberg HT", href: "#" },
     ],
   };
 
+  const turkishDays = {
+    Monday: "PAZARTESI",
+    Tuesday: "SALI",
+    Wednesday: "CARSAMBA",
+    Thursday: "PERSEMBE",
+    Friday: "CUMA",
+    Saturday: "CUMARTESI",
+    Sunday: "PAZAR",
+  };
   return (
     <>
       <main className="main">
         <HeaderOne data={{ breadcrumb }} />
         <h3 className="mb-4">Bloomberg HT Program Takvimi</h3>
         {programData && (
-          <div className="accordion accordion-flush" id="programAccordion">
+          <div className="accordion bg-dark" id="programAccordion">
             {Object.keys(programData).map((day, index) => (
-              <div className="accordion-item" key={day}>
+              <div className="accordion-item bg-dark" key={index}>
                 <h2 className="accordion-header" id={`heading${index}`}>
                   <button
-                    className="accordion-button"
+                    className="accordion-button bg-dark text-white"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapse${index}`}
                     aria-expanded="true"
                     aria-controls={`collapse${index}`}
                   >
-                    {day}
+                    {turkishDays[day] || day}
                   </button>
                 </h2>
                 <div
@@ -55,23 +72,25 @@ export default function Deneme() {
                   data-bs-parent="#programAccordion"
                 >
                   <div className="accordion-body">
-                    <div className="row">
+                    <div className="row ">
                       {programData[day].map((program) => (
                         <div
-                          className="col-lg-3 col-sm-6 mb-4"
-                          key={program.title}
+                          className="col-lg-3 col-sm-6 mb-4 "
+                          key={`${program.title}-${program.time}-${program.id}`}
                         >
-                          <div className="card">
+                          <div className="card bg-dark text-white">
                             <img
                               src={program.imgSrc}
                               alt={program.title}
                               className="card-img-top"
                             />
                             <div className="card-body">
-                              <h3 className="card-title">{program.title}</h3>
+                              <h3 className="card-title text-white">
+                                {program.title}
+                              </h3>
                               <p className="card-text">{program.description}</p>
-                              <p className="card-text text-muted">
-                                {program.time}
+                              <p className="card-text text-white">
+                                Saat : {program.time}
                               </p>
                             </div>
                           </div>
