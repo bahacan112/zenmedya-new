@@ -7,10 +7,10 @@ import "glightbox/dist/css/glightbox.min.css";
 import "@/../public/assets/scss/style.scss";
 
 import { Dosis, Jost, Big_Shoulders_Display } from "next/font/google";
-import localFont from "next/font/local";
-import { ThemeProvider } from "@/context/ThemeContext";
+/* import localFont from "next/font/local";
+ */ import { ThemeProvider } from "@/context/ThemeContext";
 
-const lowball = localFont({
+/* const lowball = localFont({
   src: [
     {
       path: "./webfonts/lowball-neue/LowballNeueThin-2OM6o.ttf",
@@ -64,7 +64,7 @@ const lowball = localFont({
   ],
   variable: "--heading-font",
 });
-
+ */
 const dosisSecondary = Dosis({
   subsets: ["latin"],
   variable: "--secondary-font",
@@ -113,7 +113,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="icon" href="favicon.ico" sizes="any" />
         <body
-          className={`${lowball.variable} ${dosisSecondary.variable} ${dosisBody.variable} ${jost.variable} ${bigShouldersDisplay.variable}`}
+          className={`${dosisSecondary.variable} ${dosisSecondary.variable} ${dosisBody.variable} ${jost.variable} ${bigShouldersDisplay.variable}`}
         >
           {children}
           <BootstrapClient />

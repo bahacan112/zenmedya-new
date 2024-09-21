@@ -88,7 +88,7 @@ const heroOneData = {
       rating: "4 Milyon İzlenme",
       duration: "25-30 dakika",
       quality: "1080p",
-      title: "Markanızı Milyonlara Ulaştırın!",
+      title: "TV de Markanızı Tanıtın!",
       description: "TV Canlı Yayınlara konukluğu,Alt Bant Reklam, Spot Reklam ",
       btnOneText: "Teklif Alın",
       btnTwoText: "Bize Ulaşın",

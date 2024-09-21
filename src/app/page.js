@@ -13,13 +13,24 @@ export default function Home() {
     <>
       <HeaderOne isHero={true} />
       <main className="main">
-        <TrendingOne channelid={process.env.BLOOMBERG_CHANNEL_ID} />
+        <TrendingOne
+          channel_id={process.env.BLOOMBERG_CHANNEL_ID}
+          channel_name="Bloomberg HT"
+        />
+        <TrendingOne
+          channel_id={process.env.EKOTURK_CHANNEL_ID}
+          channel_name="EKOTURK"
+        />
         <LiveStreamingFeature />
-        <PopularOne />
-        <CategoryOne />
-        <WeeklyPopularOne />
+        <TrendingOne
+          channel_id={process.env.CNBC_CHANNEL_ID}
+          channel_name="CNBC"
+        />
+        {/*    <PopularOne />
+        <CategoryOne /> */}
+        {/*       <WeeklyPopularOne /> */}
         <MovieSliderOne />
-        <OurOriginalOne />
+        {/*     <OurOriginalOne /> */}
       </main>
       <FooterOne />
     </>

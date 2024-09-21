@@ -4,31 +4,31 @@ import featherIconThree from "@/../public/assets/images/icons/feathur-3.svg";
 import featherIconFour from "@/../public/assets/images/icons/feathur-4.svg";
 
 const liveStreamingFeatureData = {
-  title: "HOLAA IS OFFERS SUPERIOR LIVE TV STREAMING",
+  title: "Çalışma Sistemimiz",
   features: [
     {
       image: featherIconOne,
-      title: "Flexible Streaming",
+      title: "Hazırlık Süreci",
       description:
-        "Flexible streaming allows users to use customize their viewing experience",
+        "Rezervasyonunuz ekibimiz tarafından hazırlanılarak, alt bant tasarımlarınız ve Yayın öncesi faişinizin organizasyonu yapılır",
     },
     {
       image: featherIconTwo,
-      title: "Super fast quality",
+      title: "İçerik Hazırlanması",
       description:
-        "Flexible streaming allows users to use customize their viewing experience",
+        "Yapılacak çalışmanın içeriği, dizaynı sizlerle birlikte organize edilir. Yanstılacak imaj yönünde hareket edilir.",
     },
     {
       image: featherIconThree,
-      title: "Watch from anywhere",
+      title: "Ödeme Sistemi",
       description:
-        "Flexible streaming allows users to use customize their viewing experience",
+        "Yayın sözleşmeniz düzenlenerek, yayın haftası alınan ödeme ile birlikte gerekli hazırlıklar yapılır.",
     },
     {
       image: featherIconFour,
-      title: "Download and go",
+      title: "Tamamlanma",
       description:
-        "Flexible streaming allows users to use customize their viewing experience",
+        "Organizasyon tamamlandıktan sonra.Yayınlanan bölümünüz ve reklamlarınız tarafınıza teslim edilir.",
     },
   ],
 };

@@ -2,26 +2,31 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import Skeleton from "react-loading-skeleton"; // Import for skeleton loading
 import MovieCard from "@/components/Card/MovieCard";
 
-export default function TrendingOne() {
+export default function TrendingOne(params) {
   const [trendingOneMoviesData, setTrendingOneMoviesData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // State for loading indicator
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/bloomberg-youtube");
+        const response = await fetch(`/api/youtube/${params.channel_id}`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        setTrendingOneMoviesData(data); // Veriyi state'e kaydediyoruz
+        setTrendingOneMoviesData(data);
       } catch (error) {
         console.error("Veri alırken hata oluştu:", error);
+      } finally {
+        setIsLoading(false); // Set loading to false after data fetch (or error)
       }
     };
 
     fetchData();
+    console.log("Bileşen render edildi!");
   }, []);
 
   const swiperOption = {
@@ -62,20 +67,34 @@ export default function TrendingOne() {
       <div className="d-flex justify-content-center mb-40">
         <div className="section-header">
           <span>⚡</span>
-          <h3 className="section-title lh-1 mt-2 mb-0">TRENDLER</h3>
+          <h3 className="section-title lh-1 mt-2 mb-0">
+            {params.channel_name} TRENDLER
+          </h3>
         </div>
       </div>
-      {trendingOneMoviesData && trendingOneMoviesData.length > 0 && (
-        <Swiper
-          {...swiperOption}
-          className="swiper movie-card-slider-sm movie-card-slider-item-scroll"
-        >
-          {trendingOneMoviesData.map((movie, index) => (
-            <SwiperSlide key={index}>
-              <MovieCard movie={movie} />
+      {isLoading ? ( // Conditional rendering based on loading state
+        <div className="swiper movie-card-slider-sm movie-card-slider-item-scroll">
+          {[...Array(swiperOption.slidesPerView)].map((_, i) => (
+            <SwiperSlide key={i}>
+              <Skeleton height={250} />{" "}
+              {/* Skeleton placeholder for each slide */}
             </SwiperSlide>
           ))}
-        </Swiper>
+        </div>
+      ) : (
+        trendingOneMoviesData &&
+        trendingOneMoviesData.length > 0 && (
+          <Swiper
+            {...swiperOption}
+            className="swiper movie-card-slider-sm movie-card-slider-item-scroll"
+          >
+            {trendingOneMoviesData.map((movie, index) => (
+              <SwiperSlide key={index}>
+                <MovieCard movie={movie} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )
       )}
     </div>
   );
