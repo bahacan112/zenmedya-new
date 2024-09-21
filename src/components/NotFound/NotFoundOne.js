@@ -122,12 +122,12 @@ export default function NotFoundOne() {
           <span className="main-title">404</span>
           <span className="hover-title">404</span>
         </h2>
-        <h4 className="sub-title">Oops! Something Went Wrong</h4>
+        <h4 className="sub-title">Sayfa Buluanamadı</h4>
         <Link
           className="hl-btn big-btn lh-1 btn-base fs-18 text-uppercase fw-normal"
           href="/"
         >
-          Back To Home
+          An Sayfa
         </Link>
       </div>
     </div>

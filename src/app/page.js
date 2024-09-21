@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <HeaderOne isHero={true} />
       <main className="main">
-        <TrendingOne />
+        <TrendingOne channelid={process.env.BLOOMBERG_CHANNEL_ID} />
         <LiveStreamingFeature />
         <PopularOne />
         <CategoryOne />

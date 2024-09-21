@@ -1,18 +1,19 @@
 // pages/deneme.js
 "use client";
+
 import { useEffect, useState, useRef } from "react";
 import FooterOne from "@/components/Footer/FooterOne";
 import HeaderOne from "@/components/Header/HeaderOne";
 
 export default function Deneme() {
   const [programData, setProgramData] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
   const fetchedDataRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://www.zenmedya.org/api/yayinAkisi");
-
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -44,14 +45,36 @@ export default function Deneme() {
     Saturday: "CUMARTESI",
     Sunday: "PAZAR",
   };
+
+  const filteredProgramData = programData
+    ? Object.keys(programData).reduce((acc, day) => {
+        const filteredPrograms = programData[day].filter((program) =>
+          program.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        if (filteredPrograms.length) {
+          acc[day] = filteredPrograms;
+        }
+        return acc;
+      }, {})
+    : null;
+
   return (
     <>
       <main className="main">
         <HeaderOne data={{ breadcrumb }} />
-        <h3 className="mb-4">Bloomberg HT Program Takvimi</h3>
-        {programData && (
-          <div className="accordion bg-dark" id="programAccordion">
-            {Object.keys(programData).map((day, index) => (
+        <h3 className="mb-4  container">Bloomberg HT Program Takvimi</h3>
+        <div className="mb-4  container">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Program arayın..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+        {filteredProgramData && (
+          <div className="accordion bg-dark  container" id="programAccordion">
+            {Object.keys(filteredProgramData).map((day, index) => (
               <div className="accordion-item bg-dark" key={index}>
                 <h2 className="accordion-header" id={`heading${index}`}>
                   <button
@@ -72,10 +95,10 @@ export default function Deneme() {
                   data-bs-parent="#programAccordion"
                 >
                   <div className="accordion-body">
-                    <div className="row ">
-                      {programData[day].map((program) => (
+                    <div className="row">
+                      {filteredProgramData[day].map((program) => (
                         <div
-                          className="col-lg-3 col-sm-6 mb-4 "
+                          className="col-lg-3 col-sm-6 mb-4"
                           key={`${program.title}-${program.time}-${program.id}`}
                         >
                           <div className="card bg-dark text-white">

@@ -84,7 +84,7 @@ const movieDetailData = {
   ],
 };
 
-const trendingOneMoviesData = [
+const trendingOneMoviesData1 = [
   {
     image: TrandingImageOne,
     isRibbon: false,
@@ -92,10 +92,10 @@ const trendingOneMoviesData = [
     videoSrc: "assets/video/video.mp4",
     href: "movie-details",
     title: "The Phantom Menace",
-    rating: "6.8",
-    duration: "02h 30m",
-    quality: "4k",
-    categories: ["Action", "Comedy", "Crime"],
+    rating: "",
+    duration: "",
+    quality: "",
+    categories: ["deneme deneme deneme dfeneme"],
   },
   {
     image: TrandingImageTwo,
@@ -158,7 +158,7 @@ const trendingOneMoviesData = [
     categories: ["Action", "Comedy", "Crime"],
   },
 ];
-
+const trendingOneMoviesData = trendingOneMoviesData1;
 const popularOneMoviesData = [
   {
     image: TrandingImageSeven,
