@@ -14,9 +14,7 @@ export default function YayinAkislari() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:3000/api/yayinAkisi-detail/${movie_id}`
-        );
+        const response = await fetch(`/api/yayinAkisi-detail/${movie_id}`);
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
