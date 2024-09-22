@@ -12,11 +12,11 @@ export default function Category() {
   };
   return (
     <>
-      <HeaderOne data={{ breadcrumb }} />
+      {/*  <HeaderOne data={{ breadcrumb }} />
       <main className="main">
         <CategoryBrowseList />
       </main>
-      <FooterOne />
+      <FooterOne /> */}
     </>
   );
 }
