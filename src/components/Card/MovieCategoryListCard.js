@@ -15,8 +15,8 @@ import Image from "next/image";
 
 export default function MovieCategoryListCard(movie) {
   movie = movie.data;
-  const startTime = new Date(movie.starttime);
-  const endTime = new Date(movie.endtime);
+  const startTime = new Date(movie?.starttime);
+  const endTime = new Date(movie?.endtime);
   const formatStart = startTime.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
