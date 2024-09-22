@@ -1,21 +1,26 @@
 import Image from "next/image";
-import Link from "next/link";
-
-import deleteImage from "@/../public/assets/images/icons/delete.svg";
 
 export default function MovieListCard({ movie }) {
   return (
     <div className="playlist--item">
       <div className="d-md-flex align-items-center gap-4">
-        <div className="thumb">
-          <Image src={movie.image} alt="playlist" />
+        <div className="rounded-lg">
+          <Image
+            src={movie.image.url}
+            width={400}
+            height={400}
+            alt="playlist"
+          />
         </div>
         <div className="content">
-          <h3 className="text-uppercase lh-1 fw-medium mb-1">
-            <Link href={movie.href} className="gradient-link">
+          <h5 className="text-uppercase lh-1 fw-medium mb-1">
+            <a
+              href={`https://www.youtube.com/watch?v=${movie.href}`}
+              target="_blank"
+            >
               {movie.title}
-            </Link>
-          </h3>
+            </a>
+          </h5>
           <ul className="movie-info-list d-flex align-item-center justify-content-start gap-1 gap-lg-2 mb-3">
             <li className="movie-info-list--item">
               <svg
@@ -67,8 +72,12 @@ export default function MovieListCard({ movie }) {
         </div>
       </div>
       <button className="remove-btn gradient-border-button lh-1 text-uppercase text-center fs-6 gap-2">
-        <Image src={deleteImage} alt="delete" />
-        <span className="mt-1">{movie.btnText}</span>
+        <a
+          href={`https://www.youtube.com/watch?v=${movie.href}`}
+          target="_blank"
+        >
+          <span className="mt-1"> Youtube'de İzle</span>
+        </a>
       </button>
     </div>
   );

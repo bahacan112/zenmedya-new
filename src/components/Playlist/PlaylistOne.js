@@ -1,11 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 
-import { playlistMoviesData } from "@/data/movie";
-import { playlistTvShowsData } from "@/data/movie";
 import MovieListCard from "../Card/MovieListCard";
 
-export default function PlaylistOne() {
+export default function PlaylistOne(props) {
+  const playlistMoviesData = props.data;
+  console.log(props);
   return (
     <div className="playlist-area container py-80">
       <div className="nav nav-tabs border-0 d-flex align-items-center justify-content-start gap-4 mb-4">
@@ -28,7 +27,7 @@ export default function PlaylistOne() {
       <div className="tab-content">
         <div className="tab-pane container active" id="home">
           <p className="description fs-20 fw-medium lh-1">
-            Displaying all favorite movie list
+            TV kanalının Videoları
           </p>
           {playlistMoviesData && playlistMoviesData.length > 0 && (
             <div className="playlist mt-4">
@@ -43,13 +42,13 @@ export default function PlaylistOne() {
             Displaying all favorite tv shows
           </p>
           <div className="playlist mt-4">
-            {playlistTvShowsData && playlistTvShowsData.length > 0 && (
+            {/* {playlistTvShowsData && playlistTvShowsData.length > 0 && (
               <div className="playlist mt-4">
                 {playlistTvShowsData.map((movie, index) => (
                   <MovieListCard key={index} movie={movie} />
                 ))}
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>

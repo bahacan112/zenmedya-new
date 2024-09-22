@@ -11,7 +11,7 @@ import HeroTwoSlideImageOne from "@/../public/assets/images/hero/ht-banner-img-1
 const heroOneData = {
   slides: [
     {
-      videoSrc: "assets/video/video3.mp4",
+      videoSrc: "assets/video/video.mp4",
       image: HeroSlideImageOne,
       rating: "4.9",
       duration: "02h 30m",
@@ -72,7 +72,7 @@ const heroOneData = {
       btnTwoText: "Bize Ulaşın",
     }, */
     {
-      videoSrc: "assets/video/video2.mp4",
+      videoSrc: "assets/video/video.mp4",
       image: HeroSlideImageOne,
       rating: "4.9",
       duration: "02h 30m",

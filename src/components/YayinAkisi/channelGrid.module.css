@@ -1,0 +1,26 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.5); /* Siyah arka plan, %50 opaklık */
+  padding: 20px; /* İç boşluk */
+  border-radius: 0.5rem; /* Kenar yuvarlama */
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.7); /* Beyaz arka plan, %70 opaklık */
+  border: none; /* Kenarları kaldır */
+  border-radius: 0.5rem; /* Kenar yuvarlama */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+.card a {
+  display: block; /* Linkin tüm kartı kapsamasını sağla */
+  color: inherit; /* Yazı rengini miras al */
+  text-decoration: none; /* Alt çizgiyi kaldır */
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Hover durumunda daha belirgin gölge */
+}
+
+.card-img-top {
+  opacity: 0.8; /* Resim transparan */
+}

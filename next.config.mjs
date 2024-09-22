@@ -3,9 +3,15 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https", // Protokol: https kullanıyoruz
-        hostname: "i.ytimg.com", // Domain: i.ytimg.com
-        pathname: "/vi/**", // Resimlerin yolu için pattern: tüm /vi/ altındaki resimler
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "*.tvplus.com.tr",
+        port: "33207", // Eğer port kullanmıyorsanız bu alanı boş bırakabilirsiniz
+        pathname: "/**",
       },
     ],
   },

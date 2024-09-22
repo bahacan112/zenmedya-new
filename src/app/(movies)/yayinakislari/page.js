@@ -1,23 +1,22 @@
+import YayinAkislari from "@/components/Category/YayinAkislari";
 import FooterOne from "@/components/Footer/FooterOne";
 import HeaderOne from "@/components/Header/HeaderOne";
-import PlaylistOne from "@/components/Playlist/PlaylistOne";
+import Link from "next/link";
 
-export default function Playlist() {
+export default function Category() {
   const breadcrumb = {
-    title: "Playlist",
+    title: "TV ",
     links: [
       { name: "Home", href: "/" },
-      { name: "Playlist", href: "#" },
+      { name: "Yayın AKışları", href: "#" },
     ],
   };
   return (
     <>
       <HeaderOne data={{ breadcrumb }} />
-      {/* <!-- Start Main --> */}
       <main className="main">
-        <PlaylistOne />
+        <YayinAkislari />
       </main>
-      {/* <!-- End Main --> */}
 
       <FooterOne />
     </>

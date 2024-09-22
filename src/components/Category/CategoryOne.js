@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import categories from "@/data/category";
-import CategoryCard from "@/components/Card/CategoryCard";
+import CategoryCard from "@/components/Card/YayinAkisiCard";
 
 export default function CategoryOne() {
   const swiperOptions = {

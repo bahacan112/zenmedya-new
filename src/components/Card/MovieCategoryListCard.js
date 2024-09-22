@@ -1,32 +1,51 @@
 import Link from "next/link";
 import Image from "next/image";
+{
+  /* <h5>{movie.name}</h5>
+<p>
+  {movie.starttime} - {movie.endtime}
+</p>
+<p>{movie.introduce}</p>
+<img
+  src={movie.picture}
+  alt={movie.name}
+  style={{ width: "200px" }}
+/> */
+}
 
-export default function MovieCategoryListCard({ movie }) {
+export default function MovieCategoryListCard(movie) {
+  movie = movie.data;
+  const startTime = new Date(movie.starttime);
+  const endTime = new Date(movie.endtime);
+  const formatStart = startTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  }); // "00:15"
+  const formatEnd = endTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  }); // "03:05"
+
   return (
     <div className="category-list--item row">
-      <div className="col-lg-4 mb-4 mb-lg-0">
-        <div className="thumb me-3">
-          <Image src={movie.image} alt="card-img" />
+      <div className="col-lg-2 mb-4 mb-lg-0">
+        <div className=" me-3 ">
+          <Image
+            className="thumb w-75"
+            src={movie.picture}
+            alt="card-img"
+            width={200}
+            height={200}
+          />
         </div>
       </div>
-      <div className="col-lg-6">
+      <div className="col-lg-10">
         <div className="content">
-          {movie.categories && movie.categories.length && (
-            <ul className="text-uppercase color-paragraph mb-2">
-              {movie.categories.map((category, index) => (
-                <li key={index} className="d-inline-block">
-                  {category}
-                  {index < movie.categories.length - 1 ? ", " : ""}
-                </li>
-              ))}
-            </ul>
-          )}
-          <h3 className="movie-name text-uppercase fw-medium lh-1 mb-2">
-            <Link href={movie.href} className="gradient-link">
-              {movie.title}
-            </Link>
-          </h3>
-          <ul className="movie-info-list d-flex align-item-center justify-content-start gap-1 gap-lg-2 mb-3">
+          <h3 className=" text-uppercase fw-medium lh-1 mb-2">{movie.name}</h3>
+          <h4>
+            {formatStart} - {formatEnd}
+          </h4>
+          {/*     <ul className="movie-info-list d-flex align-item-center justify-content-start gap-1 gap-lg-2 mb-3">
             <li className="movie-info-list--item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -72,9 +91,9 @@ export default function MovieCategoryListCard({ movie }) {
               </svg>
               <span>{movie.quality} Quality</span>
             </li>
-          </ul>
-          <p className="fs-20 fw-medium mb-4">{movie.description}</p>
-          <Link
+          </ul> */}
+          <h5 className="fs-20 fw-large mb-4">{movie.introduce}</h5>
+          {/* <Link
             href={movie.videoSrc}
             className="hl-btn popup_video lh-1 btn-base fs-18 fw-bold flex-shrink-0 text-uppercase"
           >
@@ -96,7 +115,7 @@ export default function MovieCategoryListCard({ movie }) {
               />
             </svg>
             <span className="pt-03">{movie.btnText}</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

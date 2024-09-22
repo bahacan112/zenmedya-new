@@ -7,16 +7,20 @@ import CategoryOne from "@/components/Category/CategoryOne";
 import WeeklyPopularOne from "@/components/Popular/WeeklyPopularOne";
 import MovieSliderOne from "@/components/MovieSlider/MovieSliderOne";
 import OurOriginalOne from "@/components/OurOriginal/OurOriginalOne";
-
+import { Suspense } from "react";
+import Loading from "./loading";
 export default function Home() {
   return (
     <>
       <HeaderOne isHero={true} />
+
       <main className="main">
-        <TrendingOne
-          channel_id={process.env.BLOOMBERG_CHANNEL_ID}
-          channel_name="Bloomberg HT"
-        />
+        <Suspense fallback={<Loading />}>
+          <TrendingOne
+            channel_id={process.env.BLOOMBERG_CHANNEL_ID}
+            channel_name="Bloomberg HT"
+          />
+        </Suspense>
         <TrendingOne
           channel_id={process.env.EKOTURK_CHANNEL_ID}
           channel_name="EKOTURK"

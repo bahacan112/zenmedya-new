@@ -20,12 +20,12 @@ export async function GET(req, { params }) {
       isRibbon: true, // Sabit değer
       count: id++, // Sabit değer
       videoSrc: "", // Sabit değer
-      href: `https://www.youtube.com/playlist?list=${playlist.id}`, // Sabit değer
+      href: `/playlist/${playlist.id}`, // Sabit değer
       title: playlist.snippet.title, // API'den gelen 'name' değeri
       rating: "", // API'den gelen 'rating' değeri (boş olabilir)
       duration: "", // API'den gelen 'duration' değeri (boş olabilir)
       quality: "", // API'den gelen 'quality' değeri (boş olabilir)
-      categories: [playlist.snippet.description], // API'den gelen 'categories' dizisi
+      categories: [], // API'den gelen 'categories' dizisi
     }));
 
     return new Response(JSON.stringify(trendingOneMoviesData), { status: 200 });

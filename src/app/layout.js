@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "glightbox/dist/css/glightbox.min.css";
 import "@/../public/assets/scss/style.scss";
+import WhatsAppButton from "@/components/Whatsapp/WhatsAppButton";
 
 import { Dosis, Jost, Big_Shoulders_Display } from "next/font/google";
 /* import localFont from "next/font/local";
@@ -116,6 +117,7 @@ export default function RootLayout({ children }) {
           className={`${dosisSecondary.variable} ${dosisSecondary.variable} ${dosisBody.variable} ${jost.variable} ${bigShouldersDisplay.variable}`}
         >
           {children}
+          <WhatsAppButton />
           <BootstrapClient />
         </body>
       </html>

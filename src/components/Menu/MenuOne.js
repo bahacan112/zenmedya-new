@@ -233,7 +233,7 @@ export default function MenuOne() {
             </div>
           </div>
           <Link
-            href="pricing"
+            href="yayinakislari"
             className="hl-btn btn-base text-uppercase d-xl-inline-block d-none"
           >
             <svg

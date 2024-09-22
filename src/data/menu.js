@@ -3,7 +3,7 @@ import logo from "@/../public/assets/images/logo.svg";
 const menuOneData = {
   logo: logo,
   href: "/",
-  btnText: "İletişime Geç",
+  btnText: "Yayın Akışları",
   menus: [
     {
       name: "Ana Sayfa",
@@ -100,7 +100,7 @@ const menuOneData = {
         },
         {
           name: "Pricing",
-          href: "pricing",
+          href: "yayinakislari",
         },
         {
           name: "404",

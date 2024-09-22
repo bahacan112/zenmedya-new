@@ -26,7 +26,6 @@ export default function TrendingOne(params) {
     };
 
     fetchData();
-    console.log("Bileşen render edildi!");
   }, []);
 
   const swiperOption = {
