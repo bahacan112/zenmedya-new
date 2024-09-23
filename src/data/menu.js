@@ -24,9 +24,11 @@ const menuOneData = {
       href: "#",
       subMenus: [
         {
-          name: "Movie List",
-          href: "movie-list",
+          name: "Yayın Akışları",
+          href: "yayinakislari",
         },
+      ],
+      /* 
         {
           name: "Movie Details",
           href: "movie-details",
@@ -80,12 +82,12 @@ const menuOneData = {
           name: "Tags",
           href: "tags",
         },
-      ],
+      ], */
     },
     {
       name: "TV Reklam",
       href: "#",
-      subMenus: [
+      /*   subMenus: [
         {
           name: "About Us",
           href: "about",
@@ -118,7 +120,7 @@ const menuOneData = {
           name: "Register",
           href: "register",
         },
-      ],
+      ], */
     },
     /*  {
       name: "Blog",

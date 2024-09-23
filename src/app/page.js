@@ -9,18 +9,18 @@ import MovieSliderOne from "@/components/MovieSlider/MovieSliderOne";
 import OurOriginalOne from "@/components/OurOriginal/OurOriginalOne";
 import { Suspense } from "react";
 import Loading from "./loading";
+import KanalListesi from "@/app/(movies)/yayinakislari/page";
+import YayinAkislari from "@/components/Category/YayinAkislari";
 export default function Home() {
   return (
     <>
       <HeaderOne isHero={true} />
 
       <main className="main">
-        <Suspense fallback={<Loading />}>
-          <TrendingOne
-            channel_id={process.env.BLOOMBERG_CHANNEL_ID}
-            channel_name="Bloomberg HT"
-          />
-        </Suspense>
+        <TrendingOne
+          channel_id={process.env.BLOOMBERG_CHANNEL_ID}
+          channel_name="Bloomberg HT"
+        />
         <TrendingOne
           channel_id={process.env.EKOTURK_CHANNEL_ID}
           channel_name="EKOTURK"
@@ -30,11 +30,13 @@ export default function Home() {
           channel_id={process.env.CNBC_CHANNEL_ID}
           channel_name="CNBC"
         />
+
         {/*    <PopularOne />
         <CategoryOne /> */}
         {/*       <WeeklyPopularOne /> */}
-        <MovieSliderOne />
+        {/*  <MovieSliderOne /> */}
         {/*     <OurOriginalOne /> */}
+        <YayinAkislari />
       </main>
       <FooterOne />
     </>

@@ -118,7 +118,7 @@ export default function FooterOne() {
             </div>
           </div>
           <div className="col-md-6 col-lg-4 col-xl-3">
-            <div className="footer-widget">
+            {/* <div className="footer-widget">
               <h4 className="widget-title text-uppercase lh-1">Kategoriler</h4>
               <ul className="footer-widget--list d-inline-block">
                 <li className="footer-widget--item">
@@ -164,18 +164,18 @@ export default function FooterOne() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="col-md-6 col-lg-2">
             <div className="footer-widget">
-              <h4 className="widget-title text-uppercase lh-1">İLetişim</h4>
+              <h4 className="widget-title text-uppercase lh-1">İLETİŞİM</h4>
               <ul className="footer-widget--list">
                 <li className="footer-widget--item">
                   <Link href="about" className="footer-widget--link">
                     About Us
                   </Link>
                 </li>
-                <li className="footer-widget--item">
+                {/* <li className="footer-widget--item">
                   <Link href="pricing" className="footer-widget--link">
                     Pricing Plan
                   </Link>
@@ -194,14 +194,14 @@ export default function FooterOne() {
                   <Link href="pricing" className="footer-widget--link">
                     Account & Billing
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
           <div className="col-md-6 col-xl-3">
             <div className="footer-widget widget-more">
               <h4 className="widget-title text-uppercase">
-                Geri DÖnüşleriniz bekliyoruz !
+                GERİ DÖNÜŞERİNİZİ BEKLİYORUZ !
               </h4>
               <div className="d-xl-flex d-lg-block d-flex align-items-center gap-3 position-relative z-1">
                 <Link

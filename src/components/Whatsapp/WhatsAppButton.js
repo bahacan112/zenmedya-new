@@ -6,11 +6,11 @@ export default function WhatsAppButton() {
   return (
     <Link
       href="https://wa.me/905061175807" // Buraya kendi telefon numaranızı ekleyin
-      className="btn btn-success rounded-circle position-fixed"
+      className="hl-btn btn-base small-btn fs-18 fw-normal text-uppercase  position-fixed"
       style={{ bottom: "20px", right: "20px", zIndex: 1000 }}
       target="_blank" // Yeni sekmede aç
     >
-      <i className="bi bi-whatsapp">
+      <i className="bi bi-whatsapp ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="100"

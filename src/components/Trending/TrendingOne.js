@@ -62,39 +62,41 @@ export default function TrendingOne(params) {
   };
 
   return (
-    <div className="trending pt-80">
-      <div className="d-flex justify-content-center mb-40">
-        <div className="section-header">
-          <span>⚡</span>
-          <h3 className="section-title lh-1 mt-2 mb-0">
-            {params.channel_name} TRENDLER
-          </h3>
+    <main className="main">
+      <div className="trending pt-80">
+        <div className="d-flex justify-content-center mb-40">
+          <div className="section-header">
+            <span>⚡</span>
+            <h3 className="section-title lh-1 mt-2 mb-0">
+              {params.channel_name} TRENDLER
+            </h3>
+          </div>
         </div>
-      </div>
-      {isLoading ? ( // Conditional rendering based on loading state
-        <div className="swiper movie-card-slider-sm movie-card-slider-item-scroll">
-          {[...Array(swiperOption.slidesPerView)].map((_, i) => (
-            <SwiperSlide key={i}>
-              <Skeleton height={250} />{" "}
-              {/* Skeleton placeholder for each slide */}
-            </SwiperSlide>
-          ))}
-        </div>
-      ) : (
-        trendingOneMoviesData &&
-        trendingOneMoviesData.length > 0 && (
-          <Swiper
-            {...swiperOption}
-            className="swiper movie-card-slider-sm movie-card-slider-item-scroll"
-          >
-            {trendingOneMoviesData.map((movie, index) => (
-              <SwiperSlide key={index}>
-                <MovieCard movie={movie} />
+        {isLoading ? ( // Conditional rendering based on loading state
+          <div className="swiper movie-card-slider-sm movie-card-slider-item-scroll">
+            {[...Array(swiperOption.slidesPerView)].map((_, i) => (
+              <SwiperSlide key={i}>
+                <Skeleton height={250} />{" "}
+                {/* Skeleton placeholder for each slide */}
               </SwiperSlide>
             ))}
-          </Swiper>
-        )
-      )}
-    </div>
+          </div>
+        ) : (
+          trendingOneMoviesData &&
+          trendingOneMoviesData.length > 0 && (
+            <Swiper
+              {...swiperOption}
+              className="swiper movie-card-slider-sm movie-card-slider-item-scroll"
+            >
+              {trendingOneMoviesData.map((movie, index) => (
+                <SwiperSlide key={index}>
+                  <MovieCard movie={movie} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )
+        )}
+      </div>
+    </main>
   );
 }

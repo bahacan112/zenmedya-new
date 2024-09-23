@@ -8,11 +8,17 @@ import YayinAkisiCard from "@/components/Card/YayinAkisiCard";
 export default function CategoryList() {
   // Arama terimi için state
   const [searchTerm, setSearchTerm] = useState("");
+  const [visibleCount, setVisibleCount] = useState(6); // Başlangıçta görünen kart sayısı
 
   // Arama terimi ile eşleşen kanalları filtreleme
   const filteredChannels = channels.filter((channel) =>
     channel.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  // Daha fazla kart göstermek için fonksiyon
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + 6); // Her tıklamada 6 kart daha ekle
+  };
 
   return (
     <div className="container py-80">
@@ -33,7 +39,7 @@ export default function CategoryList() {
       {/* Filtrelenmiş kanallar */}
       {filteredChannels && filteredChannels.length > 0 ? (
         <div className="row mt-2 row-gap-4">
-          {filteredChannels.map((category, index) => (
+          {filteredChannels.slice(0, visibleCount).map((category, index) => (
             <div key={index} className="col-xl-3 col-lg-4 col-sm-6">
               <YayinAkisiCard category={category} />
             </div>
@@ -41,6 +47,15 @@ export default function CategoryList() {
         </div>
       ) : (
         <div className="text-center">Aramanıza uygun kanal bulunamadı.</div>
+      )}
+
+      {/* Daha Fazla Butonu */}
+      {visibleCount < filteredChannels.length && (
+        <div className="text-center mt-4">
+          <button className="btn btn-primary" onClick={handleShowMore}>
+            Daha Fazla Göster
+          </button>
+        </div>
       )}
     </div>
   );

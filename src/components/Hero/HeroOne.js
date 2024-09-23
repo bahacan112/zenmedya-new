@@ -72,7 +72,12 @@ export default function HeroOne() {
                 loop
               ></video>
               <div className="thumb">
-                <Image src={slide.image} alt="card-img" className="w-100" />
+                <Image
+                  src={slide.image}
+                  alt="card-img"
+                  className="w-100"
+                  priority={true}
+                />
               </div>
               <div className="container position-absolute top-50 start-50 translate-middle mt-5">
                 <div className="row justify-content-lg-between justify-content-center">

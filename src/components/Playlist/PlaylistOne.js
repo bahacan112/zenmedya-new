@@ -4,7 +4,6 @@ import MovieListCard from "../Card/MovieListCard";
 
 export default function PlaylistOne(props) {
   const playlistMoviesData = props.data;
-  console.log(props);
   return (
     <div className="playlist-area container py-80">
       <div className="nav nav-tabs border-0 d-flex align-items-center justify-content-start gap-4 mb-4">

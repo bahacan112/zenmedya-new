@@ -26,8 +26,6 @@ export default function Playlist(playlist_link) {
 
     fetchData();
   }, []);
-  console.log(trendingOneMoviesData);
-
   const breadcrumb = {
     title: "Playlist",
     links: [
@@ -38,12 +36,9 @@ export default function Playlist(playlist_link) {
   return (
     <>
       <HeaderOne data={{ breadcrumb }} />
-      {/* <!-- Start Main --> */}
       <main className="main">
         <PlaylistOne data={trendingOneMoviesData} />
       </main>
-      {/* <!-- End Main --> */}
-
       <FooterOne />
     </>
   );
