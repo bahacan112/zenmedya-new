@@ -13,7 +13,7 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const navbarHeight = document.querySelector(".header").offsetHeight;
+      const navbarHeight = document.querySelector(".header")?.offsetHeight;
       if (window.scrollY > navbarHeight + 150) {
         setIsFixedTop(true);
       } else if (window.scrollY < navbarHeight) {

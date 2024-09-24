@@ -33,6 +33,7 @@ export default function Playlist(playlist_link) {
       { name: "Playlist", href: "#" },
     ],
   };
+
   return (
     <>
       <HeaderOne data={{ breadcrumb }} />

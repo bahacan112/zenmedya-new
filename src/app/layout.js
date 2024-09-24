@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "glightbox/dist/css/glightbox.min.css";
 import "@/../public/assets/scss/style.scss";
 import WhatsAppButton from "@/components/Whatsapp/WhatsAppButton";
-
 import { Dosis, Jost, Big_Shoulders_Display } from "next/font/google";
 /* import localFont from "next/font/local";
  */ import { ThemeProvider } from "@/context/ThemeContext";
