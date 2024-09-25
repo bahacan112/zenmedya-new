@@ -22,8 +22,8 @@ const blogs = [
   {
     image: blogOneImage,
     category: "Entertainment",
-    author: "Jhonaton week",
-    date: "01 Jan 2024",
+    author: "",
+    date: "",
     title: "Features Are Making Streaming Inclusive watching content",
     btnText: "Read more",
   },
