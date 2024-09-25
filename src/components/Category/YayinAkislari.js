@@ -1,14 +1,39 @@
 "use client";
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { channels } from "@/data/channels";
+import { useState, useEffect } from "react";
 import YayinAkisiCard from "@/components/Card/YayinAkisiCard";
+
+async function fetchChannels() {
+  try {
+    // API'ye GET isteği gönder
+    const response = await fetch("/api/kanallar/getChannels");
+
+    // JSON formatında verileri al
+    const channels1 = await response.json();
+    return channels1;
+  } catch (error) {
+    console.error("Veri alma hatası:", error);
+    return [];
+  }
+}
 
 export default function CategoryList() {
   // Arama terimi için state
   const [searchTerm, setSearchTerm] = useState("");
+  const [channels, setChannels] = useState([]); // Kanalları tutacak state
   const [visibleCount, setVisibleCount] = useState(6); // Başlangıçta görünen kart sayısı
+  const [loading, setLoading] = useState(true); // Veri yüklenme durumu
+
+  // useEffect ile component mount olduğunda kanalları çek
+  useEffect(() => {
+    async function getChannels() {
+      setLoading(true);
+      const fetchedChannels = await fetchChannels();
+      setChannels(fetchedChannels); // Gelen kanalları state'e yerleştir
+      setLoading(false);
+    }
+
+    getChannels(); // Veri çekme işlemini başlat
+  }, []); // Boş dependency array ile sadece ilk render'da çalışır
 
   // Arama terimi ile eşleşen kanalları filtreleme
   const filteredChannels = channels.filter((channel) =>
@@ -36,8 +61,10 @@ export default function CategoryList() {
         />
       </div>
 
-      {/* Filtrelenmiş kanallar */}
-      {filteredChannels && filteredChannels.length > 0 ? (
+      {/* Yüklenme durumu */}
+      {loading ? (
+        <div className="text-center">Yükleniyor...</div>
+      ) : filteredChannels && filteredChannels.length > 0 ? (
         <div className="row mt-2 row-gap-4">
           {filteredChannels.slice(0, visibleCount).map((category, index) => (
             <div key={index} className="col-xl-3 col-lg-4 col-sm-6">

@@ -21,11 +21,13 @@ export default function Home() {
           channel_id={process.env.BLOOMBERG_CHANNEL_ID}
           channel_name="Bloomberg HT"
         />
+
         <TrendingOne
           channel_id={process.env.EKOTURK_CHANNEL_ID}
           channel_name="EKOTURK"
         />
         <LiveStreamingFeature />
+
         <TrendingOne
           channel_id={process.env.CNBC_CHANNEL_ID}
           channel_name="CNBC"

@@ -9,13 +9,19 @@ export default function MovieCard({ movie }) {
     <Link href={movie.href}>
       <div className="movie-card-small position-relative">
         {/* <!-- Card Thumbnail --> */}
-        <Image
-          src={movie.image.url}
-          alt="card-img"
-          className="w-100"
-          width={movie.image.width}
-          height={movie.image.height}
-        />
+
+        {movie.image && movie.image.url ? (
+          <Image
+            src={movie.image.url}
+            alt="card-img"
+            className="w-100"
+            width={movie.image.width}
+            height={movie.image.height}
+          />
+        ) : (
+          <div className="placeholder-image">No Image Available</div>
+        )}
+
         {/* <!-- Card Badge --> */}
         {movie.isRibbon && (
           <div className="movie-badge position-absolute">

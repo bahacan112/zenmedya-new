@@ -5,12 +5,16 @@ export default function MovieListCard({ movie }) {
     <div className="playlist--item">
       <div className="d-md-flex align-items-center gap-4">
         <div className="rounded-lg">
-          <Image
-            src={movie.image.url}
-            width={400}
-            height={400}
-            alt="playlist"
-          />
+          {movie.image && movie.image.url ? (
+            <Image
+              src={movie.image.url}
+              width={400}
+              height={400}
+              alt="playlist"
+            />
+          ) : (
+            <div className="placeholder-image">No Image Available</div>
+          )}
         </div>
         <div className="content">
           <h5 className="text-uppercase lh-1 fw-medium mb-1">
