@@ -28,7 +28,7 @@ export default function MovieCard({ movie }) {
             <span>{movie.count}</span>
           </div>
         )}
-        {/* <!-- Play Button --> */}
+
         {/* <VideoOne src={movie.videoSrc} /> */}
         {/* <!-- Movie Details --> */}
         <div className="details position-absolute text-center">
