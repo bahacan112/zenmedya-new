@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Skeleton from "react-loading-skeleton"; // Import for skeleton loading
-import MovieCard from "@/components/Card/MovieCardchannel";
+import MovieCard from "@/components/Card/newCard/MovieCardchannel";
 
 export default function Ekoturk(params) {
   const [trendingOneMoviesData, setTrendingOneMoviesData] = useState([]);
