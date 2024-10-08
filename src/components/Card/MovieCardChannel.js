@@ -8,8 +8,6 @@ export default function MovieCard({ movie }) {
   return (
     <a href={movie.href} target="_blank">
       <div className="movie-card-small position-relative">
-        {/* <!-- Card Thumbnail --> */}
-
         {movie.image && movie.image.url ? (
           <Image
             src={movie.image.url}

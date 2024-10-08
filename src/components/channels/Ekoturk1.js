@@ -79,7 +79,6 @@ export default function Ekoturk(params) {
             {[...Array(swiperOption.slidesPerView)].map((_, i) => (
               <SwiperSlide key={i}>
                 <Skeleton height={250} />{" "}
-                {/* Skeleton placeholder for each slide */}
               </SwiperSlide>
             ))}
           </div>
