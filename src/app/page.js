@@ -1,5 +1,6 @@
 import FooterOne from "@/components/Footer/FooterOne";
 import HeaderOne from "@/components/Header/HeaderOne";
+import Ekoturk from "@/components/channels/ekoturk";
 import TrendingOne from "@/components/Trending/TrendingOne";
 import LiveStreamingFeature from "@/components/Feature/LiveStreamingFeature";
 import PopularOne from "@/components/Popular/PopularOne";
@@ -17,15 +18,15 @@ export default function Home() {
       <HeaderOne isHero={true} />
 
       <main className="main">
+        <Ekoturk
+          channel_id={process.env.EKOTURK_CHANNEL_ID}
+          channel_name="Ekoturk"
+        />
         <TrendingOne
           channel_id={process.env.BLOOMBERG_CHANNEL_ID}
           channel_name="Bloomberg HT"
         />
 
-        <TrendingOne
-          channel_id={process.env.EKOTURK_CHANNEL_ID}
-          channel_name="EKOTURK"
-        />
         <LiveStreamingFeature />
 
         <TrendingOne
@@ -39,6 +40,10 @@ export default function Home() {
         {/*  <MovieSliderOne /> */}
         {/*     <OurOriginalOne /> */}
         <YayinAkislari />
+        <TrendingOne
+          channel_id={process.env.EKOTURK_CHANNEL_ID}
+          channel_name="EKOTURK"
+        />
       </main>
       <FooterOne />
     </>

@@ -7,7 +7,6 @@ import * as cheerio from "cheerio";
 const url = "https://tvplus.com.tr/canli-tv/yayin-akisi/";
 // Axios ile sayfanın HTML içeriğini alıyoruz
 const { data } = await axios.get(url);
-
 // Cheerio ile HTML'i işliyoruz
 const $ = cheerio.load(data);
 
