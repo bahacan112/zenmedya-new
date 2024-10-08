@@ -1,6 +1,6 @@
 import FooterOne from "@/components/Footer/FooterOne";
 import HeaderOne from "@/components/Header/HeaderOne";
-import Ekoturk from "@/components/channels/ekoturk";
+import Ekoturk from "@/components/channels/Ekoturk";
 import TrendingOne from "@/components/Trending/TrendingOne";
 import LiveStreamingFeature from "@/components/Feature/LiveStreamingFeature";
 import PopularOne from "@/components/Popular/PopularOne";
