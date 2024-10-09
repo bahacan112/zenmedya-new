@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
   return (
     <Link
       href="https://wa.me/905061175807" // Buraya kendi telefon numaranızı ekleyin
-      className="hl-btn btn-base small-btn fs-18 fw-normal text-uppercase  position-fixed"
+      className="h2-btn fs-18  fw-normal text-uppercase  position-fixed"
       style={{ bottom: "20px", right: "20px", zIndex: 1000 }}
       target="_blank" // Yeni sekmede aç
     >

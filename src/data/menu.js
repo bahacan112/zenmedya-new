@@ -24,6 +24,10 @@ const menuOneData = {
       href: "#",
       subMenus: [
         {
+          name: "Ekotürk - Sanayi ve Ticaret",
+          href: "sanayiveticaret",
+        },
+        {
           name: "Yayın Akışları",
           href: "yayinakislari",
         },

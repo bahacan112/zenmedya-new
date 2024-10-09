@@ -8,10 +8,10 @@ import BlogComment from "@/components/Blog/BlogComment";
 
 export default function BlogDetailsLeftSidebar() {
   const breadcrumb = {
-    title: "Blog Details",
+    title: "EKO TURK",
     links: [
       { name: "Home", href: "/" },
-      { name: "Blog Details Left Sidebar", href: "#" },
+      { name: "AHU ORAKÇIOĞLU SANAYİ VE TİCARET ", href: "#" },
     ],
   };
   return (
@@ -21,15 +21,14 @@ export default function BlogDetailsLeftSidebar() {
         <div className="blog-details-area py-80">
           <div className="container">
             <div className="row">
-              <div className="col-xxl-3 col-lg-4 d-lg-block d-none">
-                <BlogSidebar />
+              <div className="col-xxl-3 col-lg-4 d-lg-block d-none ">
+                {/*   <BlogSidebar /> */}
               </div>
-              <div className="col-xxl-9 col-lg-8">
+              <div className="col-xxl-12 col-lg-12">
                 <br />
                 <BlogDetail />
                 <br />
                 <br />
-                <BlogComment />
               </div>
             </div>
           </div>

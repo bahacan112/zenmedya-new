@@ -23,6 +23,7 @@ export default function BlogDetails() {
             <div className="row">
               <div className="col-xxl-9 col-lg-8">
                 <BlogDetail />
+                <br />
                 <BlogComment />
               </div>
               {/* <!-- Blog Side Bar --> */}
