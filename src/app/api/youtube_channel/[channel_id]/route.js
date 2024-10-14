@@ -13,7 +13,7 @@ export async function GET(req, { params }) {
         { status: 404 }
       );
     }
-    let id = 3;
+    let id = 4;
     console.log("items-list", playlistsData.items[0].id);
 
     // Listenin başına eleman ekleme
@@ -65,6 +65,23 @@ export async function GET(req, { params }) {
       quality: "HD", // Manuel kalite
       categories: [], // Manuel kategoriler
     };
+    const manualMovie3 = {
+      image: {
+        url: "https://i.ytimg.com/vi/dFQsleVPyhE/hqdefault.jpg",
+        width: 320,
+        height: 180,
+      }, // Sabit bir resim
+      isRibbon: true, // Sabit değer
+      count: 3, // Sabit değer
+      videoSrc: "", // Sabit değer
+      href: "https://www.youtube.com/watch?v=dFQsleVPyhE", // Sabit bir video URL
+      title: "Gün Ortası | Kerem Ayan | Ebru Akyüz | Ahu Orakçıoğlu", // Manuel başlık
+      rating: "5.0", // Manuel rating
+      duration: "20min", // Manuel süre
+      quality: "HD", // Manuel kalite
+      categories: [], // Manuel kategoriler
+    };
+    trendingOneMoviesData.unshift(manualMovie3);
 
     trendingOneMoviesData.unshift(manualMovie2);
     trendingOneMoviesData.unshift(manualMovie);
