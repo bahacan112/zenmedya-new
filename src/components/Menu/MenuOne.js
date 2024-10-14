@@ -49,7 +49,7 @@ export default function MenuOne() {
   return (
     <div className="container nav-container position-absolute top-0 start-50 translate-middle-x lh-1">
       <div className="d-flex align-items-center justify-content-between pt-lg-0 pb-lg-0 pt-4 pb-4">
-        <Link href="/" className="main-logo me-lg-5 flex-shrink-0">
+        <Link href="/" className="main-logo  flex-shrink-0">
           <Image src={data.logo} alt="img" />
         </Link>
         <nav className="navbar-nav m-auto d-lg-inline-block d-none">
