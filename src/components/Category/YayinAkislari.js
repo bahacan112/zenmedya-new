@@ -36,9 +36,11 @@ export default function CategoryList() {
   }, []); // Boş dependency array ile sadece ilk render'da çalışır
 
   // Arama terimi ile eşleşen kanalları filtreleme
-  const filteredChannels = channels.filter((channel) =>
-    channel.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredChannels = Array.isArray(channels)
+    ? channels.filter((channel) =>
+        channel.title.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : [];
 
   // Daha fazla kart göstermek için fonksiyon
   const handleShowMore = () => {

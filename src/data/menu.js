@@ -1,4 +1,4 @@
-import logo from "@/../public/assets/images/logo.svg";
+import logo from "@/../public/assets/images/logo.png";
 
 const menuOneData = {
   logo: logo,

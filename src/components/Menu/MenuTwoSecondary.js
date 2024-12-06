@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import logo from "@/../public/assets/images/logo.svg";
+import logo from "@/../public/assets/images/logo.png";
 import profileImage from "@/../public/assets/images/icons/profile.svg";
 import { useThemeContext } from "@/context/ThemeContext";
 
