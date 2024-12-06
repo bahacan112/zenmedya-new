@@ -94,7 +94,7 @@ const bigShouldersDisplay = Big_Shoulders_Display({
 });
 
 export const metadata = {
-  title: "Zen Medya - Reklamın Dünyası",
+  title: "Gen Medya - Reklamın Dünyası",
   description:
     "Tv Reklamları, Alt Bant Reklamlar, Program Konukluğu, Web Sitesi Tasarımı, İnternet Reklamcılığı, Bilboard",
 };

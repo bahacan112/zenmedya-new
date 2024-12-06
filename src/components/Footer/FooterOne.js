@@ -239,7 +239,7 @@ export default function FooterOne() {
         {/* <!-- Footer Bottom --> */}
         <div className="row footer-bottom row-gap-3">
           <div className="col-sm-6 text-sm-start order-4 order-sm-0">
-            <p className="mb-0">© Zen Medya, Designed Bahattin Zenbil</p>
+            <p className="mb-0">© Gen Medya, Designed Bahattin Zenbil</p>
           </div>
           <div className="col-sm-6 footer-widget text-sm-end">
             <ul className="footer-widget--list">

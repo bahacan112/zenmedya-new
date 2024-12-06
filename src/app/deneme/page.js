@@ -13,7 +13,7 @@ export default function Deneme() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://www.zenmedya.org/api/yayinAkisi");
+        const response = await fetch("https://www.genmedya.tr/api/yayinAkisi");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
