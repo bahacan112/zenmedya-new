@@ -5,7 +5,7 @@ import YayinAkisiCard from "@/components/Card/YayinAkisiCard";
 async function fetchChannels() {
   try {
     // API'ye GET isteği gönder
-    const response = await fetch("/api/kanallar/getChannels");
+    const response = await fetch("/api/yayinAkisi");
 
     // JSON formatında verileri al
     const channels1 = await response.json();

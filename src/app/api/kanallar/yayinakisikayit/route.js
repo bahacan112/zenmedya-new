@@ -45,6 +45,7 @@ export async function GET() {
 
           // __NEXT_DATA__ script tag'ini bul ve içeriğini al
           const nextDataScript = $("#__NEXT_DATA__").html();
+          console.log("next data script", nextDataScript);
 
           if (!nextDataScript) {
             return { error: "__NEXT_DATA__ bulunamadı.", status: 404 };
@@ -65,7 +66,6 @@ export async function GET() {
                   timeZone: "UTC",
                 }), // Günü tarih formatında ekle
               };
-
               await programRepository.save(newProgram); // Veriyi Redis'e kaydet
             }
           }

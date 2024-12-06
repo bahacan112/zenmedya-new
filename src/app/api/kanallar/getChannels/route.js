@@ -11,7 +11,7 @@ export async function GET() {
 
     // Tüm kanalları getir
     const channels = await channelRepository.search().return.all();
-
+    console.log("kanallar", channels);
     // Redis bağlantısını kapat
 
     // Kanalları JSON formatında döndür
