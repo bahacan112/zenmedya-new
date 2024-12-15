@@ -8,10 +8,10 @@ import BlogComment from "@/components/Blog/BlogComment";
 
 export default function BlogDetailsLeftSidebar() {
   const breadcrumb = {
-    title: "EKO TURK",
+    title: "Program Konukluğu",
     links: [
       { name: "Home", href: "/" },
-      { name: "AHU ORAKÇIOĞLU SANAYİ VE TİCARET ", href: "#" },
+      { name: "Program Konukluğu ", href: "#" },
     ],
   };
   return (
