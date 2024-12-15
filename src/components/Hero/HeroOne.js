@@ -138,7 +138,7 @@ export default function HeroOne() {
                       </p>
                       <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-xl-4 gap-2">
                         <Link
-                          href="movie-details"
+                          href="https://wa.me/905061175807"
                           className="hl-btn big-btn lh-1 btn-base fs-18 fw-bold radius-20 flex-shrink-0 text-uppercase"
                         >
                           <svg
@@ -162,7 +162,7 @@ export default function HeroOne() {
                         </Link>
                         <VideoTwo
                           title={slide.btnTwoText}
-                          src="assets/video/video.mp4"
+                          src="tel:+905061175807"
                         />
                       </div>
                     </div>

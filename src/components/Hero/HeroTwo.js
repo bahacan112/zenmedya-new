@@ -103,7 +103,7 @@ export default function HeroTwo() {
                     <p className="banner-description">{slide.description}</p>
                     <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-lg-4 gap-sm-3 gap-2 pt-2 mt-lg-4">
                       <Link
-                        href="movie-details"
+                        href="https://wa.me/905061175807"
                         className="hl-btn big-btn lh-1 btn-base fs-18 fw-bold radius-100 flex-shrink-0 text-uppercase"
                       >
                         <svg
