@@ -188,8 +188,8 @@ const menuOneData = {
     }, */
 
     {
-      name: "Bilboard Reklam",
-      href: "/",
+      name: "Yurtdışı Reklam",
+      href: "/yurtdisi-reklam",
       subMenus: [
         /*  {
           name: "Home One",

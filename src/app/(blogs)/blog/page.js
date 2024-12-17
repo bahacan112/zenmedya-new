@@ -1,7 +1,6 @@
 import FooterOne from "@/components/Footer/FooterOne";
 import HeaderOne from "@/components/Header/HeaderOne";
 import BlogLayout from "@/components/Layout/BlogLayout";
-
 export default function Blog() {
   const breadcrumb = {
     title: "Blog",
